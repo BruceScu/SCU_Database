@@ -13,7 +13,7 @@ int main()
 			matrix_1.SetElement(i, j, i * matrix_1.GetColumnCount() + j);
 		}
 	}
-	cout << "matrix_1:" << endl;
+	cout << "matrix_1:(rows:" << matrix_1.GetRowCount() << " columns:" << matrix_1.GetColumnCount() << ")" << endl;
 	RowMatrixOperations<int>::Print(matrix_1);
 
 	vector<int> vector_1(25, 1);
@@ -25,7 +25,7 @@ int main()
 	cout << endl;
 	RowMatrix<int> matrix_2(5, 5);
 	matrix_2.FillFrom(vector_1);
-	cout << "matrix_2 filled from vector_1:" << endl;
+	cout << "matrix_2 filled from vector_1: (rows:" << matrix_2.GetRowCount() << " columns:" << matrix_2.GetColumnCount() << ")" << endl;
 	RowMatrixOperations<int>::Print(matrix_2);
 
 	vector<int> vector_2(5, 2);
@@ -37,7 +37,7 @@ int main()
 	cout << endl;
 	RowMatrix<int> matrix_3(5, 1);
 	matrix_3.FillFrom(vector_2);
-	cout << "matrix_3 filled from vector_2:" << endl;
+	cout << "matrix_3 filled from vector_2: (rows:" << matrix_3.GetRowCount() << " columns:" << matrix_3.GetColumnCount() << ")" << endl;
 	RowMatrixOperations<int>::Print(matrix_3);
 
 	cout << "result = matrix_1 + matrix_2:" << endl;
